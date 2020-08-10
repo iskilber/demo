@@ -1,0 +1,1 @@
+export * from './check-24-logo/check-24-logo.component';

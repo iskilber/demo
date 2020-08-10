@@ -15,7 +15,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@check24/dao": ["libs/dao/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

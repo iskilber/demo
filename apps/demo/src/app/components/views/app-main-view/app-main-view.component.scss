@@ -1,0 +1,19 @@
+
+.chech24Theme {
+  --color-blue: #005ea8;
+
+
+  --header-background: var(--color-blue);
+
+  background: #fafafa;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.header {
+  background-color: var(--header-background);
+  height: 73px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+}

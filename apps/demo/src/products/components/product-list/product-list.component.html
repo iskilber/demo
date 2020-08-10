@@ -1,0 +1,13 @@
+<div class="view" 
+  demoScroll
+  (bottom)="handleBottomReached()"
+  (top)="handleTopReached()"
+>
+  <ul class="product-list">
+    <demo-product 
+      *ngFor="let product of dao.products$ | async; let i = index"
+      [product]="product"
+    ></demo-product>
+  </ul>
+  <div *ngIf="dao.pending$ | async" class="loader">Loading products...</div>
+</div>

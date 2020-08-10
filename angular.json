@@ -120,6 +120,38 @@
           }
         }
       }
+    },
+    "dao": {
+      "projectType": "library",
+      "root": "libs/dao",
+      "sourceRoot": "libs/dao/src",
+      "prefix": "check24",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/dao/tsconfig.lib.json",
+              "libs/dao/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/dao/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/dao/jest.config.js",
+            "tsConfig": "libs/dao/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/dao/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {
